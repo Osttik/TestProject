@@ -1,0 +1,45 @@
+﻿@model TestProject.Models.Tasks
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="text-center">
+        Attack teams <br />
+        @foreach (var item in Model.AttackTeams)
+        {
+            <p>
+                <span>League number </span> @item.LeagueNumber <br />
+                <span>Name </span> @item.Name <br />
+                <span>Goals scored </span> @item.GoalsScored <br />
+                <span>Conceded goals </span> @item.ConcededGoals <br />
+            </p>
+        }
+        ======================================================================================= <br />
+        Defender teams <br />
+        @foreach (var item in Model.DefendTeams)
+        {
+            <p>
+                <span>League number </span> @item.LeagueNumber <br />
+                <span>Name </span> @item.Name <br />
+                <span>Goals scored </span> @item.GoalsScored <br />
+                <span>Conceded goals </span> @item.ConcededGoals <br />
+            </p>
+        }
+        ======================================================================================= <br />
+        Attack to defend teams <br />
+        @foreach (var item in Model.AttackToDefendTeams)
+        {
+            <p>
+                <span>League number </span> @item.LeagueNumber <br />
+                <span>Name </span> @item.Name <br />
+                <span>Goals scored </span> @item.GoalsScored <br />
+                <span>Conceded goals </span> @item.ConcededGoals <br />
+            </p>
+        }
+        ======================================================================================= <br />
+        <p>
+            The best day <br />
+            <span>Best day </span> @Model.BestDay.Date <br />
+            <span>Total Score </span> @Model.BestDay.TotalGoals <br />
+        </p>
+    </div>
